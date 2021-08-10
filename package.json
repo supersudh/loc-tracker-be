@@ -6,7 +6,8 @@
   "author": "Sudharsan Ravikumar <supersudh@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "restart:server": "pm2 delete loc-tracker-be && pm2 start npm --name loc-tracker-be -- run start"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
