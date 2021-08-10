@@ -14,7 +14,10 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
+  console.log('######');
+  console.log(new Date());
   console.log(req.body);
+  console.log('######');
   return res.json({ status: 'ok' });
 });
 
