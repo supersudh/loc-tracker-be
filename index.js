@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const moment = require('moment');
 
 require('dotenv').config();
 
@@ -15,7 +16,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   console.log('######');
-  console.log(new Date());
+  console.log(moment().utcOffset("+05:30").format('MM/DD/YYYY hh:mm:ss'));
   console.log(req.body);
   console.log('######');
   return res.json({ status: 'ok' });
